@@ -51,7 +51,7 @@ state는 상태라는 뜻으로, 컴포넌트 내에서 변할 수 있는 값을
 ## useState
 React에서는 useState라는 hook을 이용하여 state를 다룬다.
 
-### useState 사용법
+### *useState 사용법
 1. `import` 키워드로 useState 불러오기
     ```
     import { useState } from "react";
@@ -73,23 +73,28 @@ state 변수는 React에 의해 함수가 끝나도 사라지지 않는다.
     - false : state 초깃값  
 3. jsx 엘리먼트 내부에서 state 변수를 직접 불러서 사용한다.
 
-```
-// 체크 컴포넌트 예시
-function CheckboxExample() {
-  const [isChecked, setIsChecked] = useState(false);
+    ```
+    // 체크 컴포넌트 예시
+    function CheckboxExample() {
+      const [isChecked, setIsChecked] = useState(false);
 
-  const handleChecked = (event) => {
-    setIsChecked(event.target.checked);
-  };
+      const handleChecked = (event) => {
+        setIsChecked(event.target.checked);
+      };
 
-  return (
-    <div className="App">
-      <input type="checkbox" checked={isChecked} onChange={handleChecked} />
-      <span>{isChecked ? "Checked!!" : "Unchecked"}</span>
-    </div>
-  );
-};
-```
+      return (
+        <div className="App">
+          <input type="checkbox" checked={isChecked} onChange={handleChecked} />
+          <span>{isChecked ? "Checked!!" : "Unchecked"}</span>
+        </div>
+      );
+    };
+    ```
+### *controlled component
+React가 state를 통제할 수 있는 컴포넌트를 말한다.
+
+# 단방향 데이터 흐름
+
 
 
 
