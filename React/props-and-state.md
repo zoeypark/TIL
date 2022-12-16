@@ -61,11 +61,11 @@ React에서는 useState라는 hook을 이용하여 state를 다룬다.
 state 변수는 React에 의해 함수가 끝나도 사라지지 않는다.
     ```
     function CheckboxExample() {
-    const [isChecked, setIsChecked] = useState(false);
+    const [isChecked, setIsChecked] = useState(false); 
     }
     ```
     ```
-    const [state 저장 변수, state 갱신 함수] = useState(상태 초기 값);
+    const [state 저장 변수, state 갱신 함수] = useState(상태 초기 값); // useState의 구조 분해 할당
     ```
     - isChecked : state를 저장하는 변수
     - setIsChecked : state isChecked 를 변경하는 함수
@@ -93,7 +93,8 @@ state 변수는 React에 의해 함수가 끝나도 사라지지 않는다.
 ### *controlled component
 React가 state를 통제할 수 있는 컴포넌트를 말한다.
 
-# 단방향 데이터 흐름
+# One way data flow
+React에서 data(props)는 Parent 컴포넌트에서 Child 컴포넌트로 흐른다.
 
 
 
